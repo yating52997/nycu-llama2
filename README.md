@@ -1,4 +1,8 @@
 # nycu-llama2
+
+## Abstract
+Our goal is to establish a large language model (LLM) capable of answering questions related to NYCU. Our approach involves leveraging Taiwan Llama, a 7-billion-parameter model, then subsequently finetunes it using LoRA. To collect our data, we generate question-answer pairs using GPT-3.5. The resultant model is deployed on the web for seamless inference.
+
 ## Dataset
 We collect data containing documents from NYCU and some information about our department, then use GPT to generate QA pairs. Finally, complete the dataset with 3000 pairs.
 The dataset can be downloaded here:
@@ -8,7 +12,8 @@ The dataset can be downloaded here:
 ```py
 python main.py
 ```
-If ypu are using V100, the training time is roughly 10 minutes per epoch.
+If you are using V100, the training time is roughly 10 minutes per epoch.
+
 You may want to run inference to test the model
 ```py
 python inference.py
